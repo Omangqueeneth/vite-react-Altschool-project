@@ -1,12 +1,13 @@
-SingleRepository.jsx import { Link, useParams } from "react-router-dom";
-import { MdDelete, MdEdit } from "react-icons/md";
-import { singleRepository, updateRepository } from "../services";
+import { Link, useParams } from 'react-router-dom';
+import { MdDelete, MdEdit } from 'react-icons/md';
+import { updateRepository } from '../service';
 
-import { CircularProgress } from "@chakra-ui/react";
-import DeleteModal from "./DeleteModal";
-import { FaArrowLeft } from "react-icons/fa6";
-import React from "react";
-import styled from "styled-components";
+import { CircularProgress } from '@chakra-ui/react';
+import { FaArrowLeft } from 'react-icons/fa6';
+import React from 'react';
+import styled from 'styled-components';
+import { singleRepository } from '../service';
+import DeleteModal from './DeleteRepository';
 
 const SingleContainer = styled.div`
   padding: 30px;
@@ -81,8 +82,8 @@ const SingleRepository = () => {
   const [showEdit, setShowEdit] = React.useState(false);
   const [showModal, setShowModal] = React.useState(false);
 
-  const [name, setName] = React.useState("");
-  const [description, setDescription] = React.useState("");
+  const [name, setName] = React.useState('');
+  const [description, setDescription] = React.useState('');
   const [isLoading, setIsLoading] = React.useState(false);
 
   const [loading, setLoading] = React.useState(true);
@@ -200,7 +201,7 @@ const SingleRepository = () => {
               {isLoading ? (
                 <CircularProgress size={23} isIndeterminate color="#47478e" />
               ) : (
-                "Update Repository"
+                'Update Repository'
               )}
             </Button>
           </div>

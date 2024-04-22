@@ -1,6 +1,6 @@
-Navbar.jsx /* eslint-disable react/prop-types */
-import React from "react";
-import styled from "styled-components";
+/* eslint-disable react/prop-types */
+import React from 'react';
+import styled from 'styled-components';
 
 // .nav-container {
 

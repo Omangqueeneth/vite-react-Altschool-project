@@ -1,9 +1,9 @@
-AllRepository.jsx                  import { CircularProgress } from "@chakra-ui/react";
-import Pagination from "./Pagination";
-import React from "react";
-import { allRepositories } from "../services";
-import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
+import { CircularProgress } from '@chakra-ui/react';
+import Pagination from './Pagination';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
+import { allRepositories } from '../service';
 
 const AllRepoContainer = styled.div`
   padding: 30px;
@@ -78,7 +78,7 @@ const AllRepository = () => {
   }, []);
 
   const handleClick = (id) => {
-    navigate(/single/${id});
+    navigate(`/single/${id}`);
   };
 
   if (loading) {

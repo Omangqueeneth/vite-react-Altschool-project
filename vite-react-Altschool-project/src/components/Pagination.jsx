@@ -1,9 +1,9 @@
-Pagination.jsx   import { MdArrowLeft, MdArrowRight } from "react-icons/md";
+import { MdArrowLeft, MdArrowRight } from 'react-icons/md';
 
 /* eslint-disable react/prop-types */
-import React from "react";
-import { allRepositories } from "../services";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
+import { allRepositories } from '../service';
 
 const Container = styled.div`
   .faint {
@@ -44,12 +44,12 @@ const Pagination = ({ setAllRepos, setLoading, allRepos }) => {
 
   return (
     <Container className="md-gap flex ai-center jc-center">
-      <div className={page === 1 ? "faint flex ai-center" : "flex ai-center"}>
+      <div className={page === 1 ? 'faint flex ai-center' : 'flex ai-center'}>
         <MdArrowLeft color="#8a8aef" size={23} />
         <button
           onClick={handlePrevPage}
           disabled={page === 1}
-          className={page === 1 ? "faint" : ""}
+          className={page === 1 ? 'faint' : ''}
         >
           Previous Page
         </button>

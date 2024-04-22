@@ -1,11 +1,11 @@
-App.jsx             import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from 'react-router-dom';
 
-import AllRepository from "./components/AllRepository";
-import ErrorPage from "./components/ErrorPage";
-import Modal from "./components/Modal";
-import Navbar from "./components/Navbar";
-import React from "react";
-import SingleRepository from "./components/SingleRepository";
+import AllRepository from './components/AllRepository';
+import ErrorPage from './components/ErrorPage';
+import Navbar from './components/NavBar';
+import Modal from './components/Modal';
+import React from 'react';
+import SingleRepository from './components/SingleRepository';
 
 const App = () => {
   const [open, setOpen] = React.useState(false);

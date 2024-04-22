@@ -1,12 +1,12 @@
-DeleteRepository.jsx        import { createRepository, deleteRepository } from "../services";
+import { createRepository, deleteRepository } from '../service';
 
-import { CircularProgress } from "@chakra-ui/react";
+import { CircularProgress } from '@chakra-ui/react';
 /* eslint-disable react/prop-types */
-import { IoMdClose } from "react-icons/io";
-import { MdClose } from "react-icons/md";
-import React from "react";
-import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
+import { IoMdClose } from 'react-icons/io';
+import { MdClose } from 'react-icons/md';
+import React from 'react';
+import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 const ModalContainer = styled.div`
   position: fixed;
@@ -65,7 +65,7 @@ const DeleteModal = ({ showModal, setShowModal, name }) => {
       console.log(response);
       setShowModal(false);
       setIsLoading(false);
-      navigate("/");
+      navigate('/');
     } catch (error) {
       setIsLoading(false);
     }
@@ -99,7 +99,7 @@ const DeleteModal = ({ showModal, setShowModal, name }) => {
           {isLoading ? (
             <CircularProgress size={23} isIndeterminate color="#47478e" />
           ) : (
-            "Delete Repository"
+            'Delete Repository'
           )}
         </ModalButton>
       </ModalInner>

@@ -1,10 +1,8 @@
-Modal.jsx     import { CircularProgress } from "@chakra-ui/react";
-/* eslint-disable react/prop-types */
-import { IoMdClose } from "react-icons/io";
-import { MdClose } from "react-icons/md";
-import React from "react";
-import { createRepository } from "../services";
-import styled from "styled-components";
+import { CircularProgress } from '@chakra-ui/react';
+import { IoMdClose } from 'react-icons/io';
+import React from 'react';
+import styled from 'styled-components';
+import { createRepository } from '../service';
 
 const ModalContainer = styled.div`
   position: fixed;
@@ -49,8 +47,8 @@ const ModalButton = styled.button`
 `;
 
 const Modal = ({ open, setOpen }) => {
-  const [name, setName] = React.useState("");
-  const [description, setDescription] = React.useState("");
+  const [name, setName] = React.useState('');
+  const [description, setDescription] = React.useState('');
   const [isLoading, setIsLoading] = React.useState(false);
 
   // you can also use this
@@ -68,8 +66,8 @@ const Modal = ({ open, setOpen }) => {
     console.log(response);
     setOpen(false);
     setIsLoading(false);
-    setName("");
-    setDescription("");
+    setName('');
+    setDescription('');
   };
 
   if (!open) {
@@ -120,7 +118,7 @@ const Modal = ({ open, setOpen }) => {
           {isLoading ? (
             <CircularProgress size={23} isIndeterminate color="#47478e" />
           ) : (
-            "Create Repository"
+            'Create Repository'
           )}
         </ModalButton>
       </ModalInner>
